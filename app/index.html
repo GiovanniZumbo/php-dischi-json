@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music albums</title>
+    <!-- Bootstrap -->
+     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css' integrity='sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==' crossorigin='anonymous'/>
+    <!-- VUE 3 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script defer src="script.js"></script>
+</head>
+
+
+
+
+
+<body>
+    <div id="app">
+        <main>
+            <div class="container">
+                <h1 class="text text-center">PHP Music Albums</h1>
+                <div class="row row-cols-3">
+                    <div class="col"  v-for="n in 6">
+                        <div class="card">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body text-center">
+
+                                <h4>Title</h4>
+                                <p>Author</p>
+                                <h5>Year</h5>
+
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>
