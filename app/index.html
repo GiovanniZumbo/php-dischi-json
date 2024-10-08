@@ -24,12 +24,12 @@
             <div class="container">
                 <h1 class="text text-center">PHP Music Albums</h1>
                 <div class="row row-cols-3">
-                    <div class="col"  v-for="n in 6">
+                    <div class="col" v-for="(album, index) in albumList" :key="index">
                         <div class="card">
                             <img src="..." class="card-img-top" alt="...">
                             <div class="card-body text-center">
 
-                                <h4>Title</h4>
+                                <h4>{{ album.title }}</h4>
                                 <p>Author</p>
                                 <h5>Year</h5>
 

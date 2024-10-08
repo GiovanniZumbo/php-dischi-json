@@ -1,28 +1,31 @@
 const { createApp } = Vue;
 
-
 createApp({
   data() {
     return {
-albumList: [],
-apiUrl: "",
+        albumList: [],
+        apiUrl: "http://localhost/php-dischi-json/api/albums.php",
     }
   },
 
+
   methods:{
     getAlbumList(){
-        axios.get('/user?ID=12345')
-        .then(function (response) {
-          // handle success
-          console.log(response);
+        axios.get(this.apiUrl)
+        .then((response) => {
+          
+          console.log(response.data);
+          albumList = response.data;
+          console.log("Album list array:", albumList);
         })
         .catch(function (error) {
           // handle error
           console.log(error);
-        })
-    },
-    created(){
-        this.getAlbumList();
+        });
     }
+},
+created(){
+    this.getAlbumList();
+
   }
 }).mount('#app')
