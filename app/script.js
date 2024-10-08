@@ -15,7 +15,7 @@ createApp({
         .then((response) => {
           
           console.log(response.data);
-          albumList = response.data;
+          this.albumList = response.data;
           console.log("Album list array:", albumList);
         })
         .catch(function (error) {

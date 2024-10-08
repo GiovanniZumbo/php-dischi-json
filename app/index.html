@@ -26,12 +26,12 @@
                 <div class="row row-cols-3">
                     <div class="col" v-for="(album, index) in albumList" :key="index">
                         <div class="card">
-                            <img src="..." class="card-img-top" alt="...">
+                            <img :src="album.poster" class="card-img-top" alt="...">
                             <div class="card-body text-center">
 
                                 <h4>{{ album.title }}</h4>
-                                <p>Author</p>
-                                <h5>Year</h5>
+                                <p>{{ album.author }}</p>
+                                <h5>{{ album.year }}</h5>
 
                             </div>
                           </div>
