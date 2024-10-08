@@ -7,6 +7,8 @@
     <title>Music albums</title>
     <!-- Bootstrap -->
      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css' integrity='sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==' crossorigin='anonymous'/>
+     <!-- Custom CSS -->
+     <link rel="stylesheet" href="style.css">
     <!-- VUE 3 -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- Axios -->
@@ -20,14 +22,22 @@
 
 <body>
     <div id="app">
+
+        <nav class="navbar">
+            <div class="container">
+              <a class="navbar-brand" href="#"> 
+                <img id="spotify-logo" src="./img/spotify-logo.png" alt="spotify_logo">
+              </a>
+            </div>
+          </nav>
+
         <main>
             <div class="container">
-                <h1 class="text text-center">PHP Music Albums</h1>
-                <div class="row row-cols-3">
+                <div class="row row-cols-3 p-5 row-gap-5">
                     <div class="col" v-for="(album, index) in albumList" :key="index">
                         <div class="card">
-                            <img :src="album.poster" class="card-img-top" alt="...">
-                            <div class="card-body text-center">
+                            <img :src="album.poster" class="card-img-top p-3 px-5" alt="...">
+                            <div class="card-body text-center text-light">
 
                                 <h4>{{ album.title }}</h4>
                                 <p>{{ album.author }}</p>
